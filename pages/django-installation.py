@@ -7,7 +7,7 @@ st.page_link("main.py", label="Back to Homepage", icon="🏠")
 
 st.divider()
 
-st.write("Django is opinionated, so there are rules & conventions to follow. The architectural pattern is Model, View, Template. Model is for Database Operation, View is for Business Logic,and  Template is for Presentation Layer")
+st.write("Django is opinionated, so there are rules & conventions to follow. The architectural pattern is Model, View, Template. Model is for Database Operation, View is for Business Logic,and  Template is for Presentation Layer.")
 
 st.write("### Initiate Project")
 
@@ -54,6 +54,8 @@ INSTALLED_APPS = [
 ]
 """)
 
+st.write("Now we can leave the :blue-background[core] directory for a while.")
+
 st.write("### Views")
 
 st.write("Views is the template where users can see the app on browser. On your :blue-background[views.py], you can define functions (or routes?) like this:")
@@ -72,7 +74,7 @@ def profile_view(request):
   return render(request, "profile.html")
 """)
 
-st.write("Now we need a place to collect all the html files. Hence, create a directory inside your app, it's a :blue-background[templates] directory. Inside it, you can create as many html files as you want.")
+st.write("Now we need a place to collect all the html files. Hence, create a directory inside your app called :blue-background[templates] directory. Inside it, you can create as many html files as you want. In this case, you need to create `index.html`, `dashboard.html`, `profile.html`.")
 
 st.write("### Dispatcher")
 
@@ -81,7 +83,7 @@ st.write("Dispatcher is like a file where we can define all the routes after cre
 st.code(f""" 
 from django.urls import path
 # import your view here
-from .views import index_view, profile_view
+from .views import index_view, profile_view, dashboard_view
 
 urlpatterns = [
   path("", index_view, name="index"),
@@ -100,11 +102,11 @@ st.code(f"""
 ./manage.py runserver
 """)
 
-st.write("We can follow the url in terminal and open it on browser.")
+st.write("We can follow the url from the terminal and open it on browser. Now you can access the index page, profile page, and dashboard page.")
 
 st.write("### Create Models")
 
-st.write("We can define the ORM in the :blue-background[models.py] file. Create something like:")
+st.write("We can define the ORM in the :blue-background[models.py] file under the your app directory. Create something like:")
 
 st.code(f""" 
 from django.db import models
@@ -136,11 +138,11 @@ class Note(models.Model):
 st.write("We need to run :blue-background[./manage.py makemigrations] and then :blue-background[./manage.py migrate]. This way we don't mess up the data migration.")
 
 st.write("Run the server again using: :blue-background[./manage.py runserver].")
-st.write("On :blue-background[http://localhost:8000/admin/], you won't be able to see your app there.")
+st.write("Now open :blue-background[http://localhost:8000/admin/], you won't be able to see your app there cause you need to login.")
 
 st.write("### Create a Superuser")
 
-st.write("Inside you app directory (not the :blue-background[core] directory), find :blue-background[admin.py] file. You can register your app there.")
+st.write("Inside your app directory (not the :blue-background[core] directory), find :blue-background[admin.py] file. You can register your app there.")
 
 st.code(f""" 
 from django.contrib import admin
@@ -159,7 +161,7 @@ st.code(f"""
 
 st.write("On terminal, create username. You can skip email and it will fallback to username. Create the password as well. If the password is not unique, you can just ignore the warning and move on.")
 
-st.write("Now you can run the server and check :blue-background[http://localhost:8000/admin/] to do CRUD on your app name.")
+st.write("Now you can run the server and check :blue-background[http://localhost:8000/admin/]. Login using the credentials and you can even do CRUD on your app name.")
 
 st.write("I found out that 🏃‍♂️:red[`php artisan` is to Laravel as `./manage.py` is to Django].")
 st.write("That's all.")
