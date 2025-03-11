@@ -94,6 +94,22 @@ urlpatterns = [
 ]
 """)
 
+st.write("Now move to the :blue-background[core] directory and find `urls.py` file. There we should register our app too.")
+
+st.code(f""" 
+....
+        
+from django.contrib import admin
+# add/import 'include' 
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    # apply include here, pointing to our app's name -> urls.py file
+    path('', include('notes.urls'))
+]
+""")
+
 st.write("### Run Server")
 
 st.write("I think everything is setup at this point. It's time to run the server to see the Views. Run it using this command:")
