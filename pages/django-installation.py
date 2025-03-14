@@ -80,7 +80,7 @@ st.write("### Dispatcher")
 
 st.write("Dispatcher is like a file where we can define all the routes after creating the html files. Under the same app, create :blue-background[urls.py] and write your dispatcher there.")
 
-st.code(f""" 
+st.code(""" 
 from django.urls import path
 # import your view here
 from .views import index_view, profile_view, dashboard_view
@@ -96,7 +96,7 @@ urlpatterns = [
 
 st.write("Now move to the :blue-background[core] directory and find `urls.py` file. There we should register our app too.")
 
-st.code(f""" 
+st.code(""" 
 ....
         
 from django.contrib import admin
@@ -114,7 +114,7 @@ st.write("### Run Server")
 
 st.write("I think everything is setup at this point. It's time to run the server to see the Views. Run it using this command:")
 
-st.code(f""" 
+st.code(""" 
 ./manage.py runserver
 """)
 
@@ -124,7 +124,7 @@ st.write("### Create Models")
 
 st.write("We can define the ORM in the :blue-background[models.py] file under the your app directory. Create something like:")
 
-st.code(f""" 
+st.code(""" 
 from django.db import models
 
 # Create your models here.
@@ -139,7 +139,7 @@ class Note(models.Model):
 st.write("At this point, we can just run :blue-background[./manage.py migrate] cause it's a fresh start.")
 st.write("But when we add a new variable, like `created_at` below:")
 
-st.code(f""" 
+st.code(""" 
 from django.db import models
 
 # Create your models here.
@@ -160,7 +160,7 @@ st.write("### Create a Superuser")
 
 st.write("Inside your app directory (not the :blue-background[core] directory), find :blue-background[admin.py] file. You can register your app there.")
 
-st.code(f""" 
+st.code(""" 
 from django.contrib import admin
 # import your models
 from .models import Note
@@ -171,7 +171,7 @@ admin.site.register(Note)
 
 st.write("Now turn off your terminal (or open a new one) and run the command below:")
 
-st.code(f""" 
+st.code(""" 
 ./manage.py createsuperuser
 """)
 
