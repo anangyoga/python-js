@@ -13,7 +13,7 @@ st.write("### Initiate Project")
 
 st.write("To initiate the project, we can start by running these following commands:")
 
-st.code(f""" 
+st.code(""" 
 1. python -m venv .venv
 2. source ./.venv/Scripts/activate (Windows)
 3. pip install django
@@ -25,7 +25,7 @@ st.write("### Create Root Project")
 
 st.write("It's not convention, but mas Indra suggests to use :blue-background[core] or :blue-background[config] as the directory root of the project.")
 
-st.code(f""" 
+st.code(""" 
 django-admin startproject core .
 """)
 
@@ -33,7 +33,7 @@ st.write("Note: use :blue-background[. [dot]] after project's name so it didn't 
 st.write("Now you have :blue-background[core] directory.")
 st.write("Let's initiate a project as the :blue-background[core] directory is the root of the app. We can start by running this command:")
 
-st.code(f""" 
+st.code(""" 
 ./manage.py startapp -nameapp
 """)
 
@@ -45,7 +45,7 @@ st.write("Before writing any code. Go to the :blue-background[core] directory an
 
 st.write("Something like this:")
 
-st.code(f""" 
+st.code(""" 
 INSTALLED_APPS = [
     ...
     'django.contrib.staticfiles',
@@ -60,7 +60,7 @@ st.write("### Views")
 
 st.write("Views is the template where users can see the app on browser. On your :blue-background[views.py], you can define functions (or routes?) like this:")
 
-st.code(f""" 
+st.code(""" 
 from django.shortcuts import render
 
 # Create your views here.
