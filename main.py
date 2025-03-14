@@ -2,7 +2,7 @@ import streamlit as st
 
 st.set_page_config(page_title="Homepage", page_icon="🏠")
 
-st.title("Python for JS Developers")
+st.title("Python Docs")
 st.write("A personal notes.")
 
 st.divider()

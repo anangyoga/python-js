@@ -7,11 +7,11 @@ st.page_link("main.py", label="Back to Homepage", icon="🏠")
 
 st.divider()
 
-st.write("I work with Javascript environment and I think that Python & Javascript has similar fundamental. The only different is the syntax. Here's the introduction to Python for those who already familiar with Javascript.")
+st.write("I think that Python & Javascript is similar but the syntax is different -- Python is simpler. Here's the introduction to Python for those who already familiar with Javascript.")
 
 st.write("### Variables")
 
-st.write("Javascript uses :blue-background[let] and :blue-background[const] to declare a variable. In Python we don't need that. The conventions are:")
+st.write("Javascript uses :blue-background[let] and :blue-background[const] to declare a variable. In Python we don't need that. The conventions of writing a variable in Python are:")
 st.write("1. A variable shouldn't start with number.")
 st.write("2. A variable can't contain a space.")
 st.write("3. A variable can't be a kebab-case.")
