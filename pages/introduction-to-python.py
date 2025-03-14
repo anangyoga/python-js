@@ -13,22 +13,28 @@ st.write("### Variables")
 
 st.write("Javascript uses :blue-background[let] and :blue-background[const] to declare a variable. In Python we don't need that. The conventions of writing a variable in Python are:")
 st.write("1. A variable shouldn't start with number.")
+st.code("""1fruit = 'Apple' # error""")
 st.write("2. A variable can't contain a space.")
+st.code("""a fruit = 'Apple' # error""")
 st.write("3. A variable can't be a kebab-case.")
+st.code("""a-fruit = 'Apple' # error""")
 st.write("4. A variable is case sensitive.")
+st.code("""favorite_fruit = 'Apple' 
+print(favorite_Fruit) # error        
+""")
 st.write("5. A variable can't use reserved keyword in python.")
+st.code("""return = 'Apple' # error""")
 
 st.write("Best practice writing a variable:")
 st.write("1. Use snake_case.")
+st.code("""favorite_fruit = 'Apple' # recommended""")
 st.write("2. Or PascalCase.")
+st.code("""FavoriteFruit = 'Apple' # cool but okay""")
 st.write("3. UPPER_CASE is for constanta, in Js we use :blue-background[const].")
 
 st.code(""" 
-fruit = 'Durian'
-favorite_fruit = 'Durian'
-1favoritefruit = 'Durian' #error
-favorite fruit = 'Durian' #error
-favorite-fruit = 'Durian' #error
+# Javascript
+const BASE_URL = 'https://something.com' 
 
 # constanta
 APP_NAME = 'todolist'
@@ -65,7 +71,6 @@ violets are blue
 python is great
 just like you
 '''
-
 """)
 
 st.write("##### Boolean")
@@ -80,7 +85,7 @@ const isAdmin = true;
 # Python
 is_admin = True
 is_active = False
-'''
+
 """)
 
 st.write("##### Number")
@@ -146,7 +151,7 @@ myset = {"lorem", "ipsum", "ipsum", "dolor"}
 # 'ipsum' is duplicated so when we print it only once appears
 """)
 
-st.write("##### Set")
+st.write("##### Dictionary")
 
 st.write("We call it Object in Javascript. But the key is wrapped in double-quote, like json.")
 
